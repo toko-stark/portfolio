@@ -74,3 +74,10 @@
   border-bottom: 2px solid #d946ef;
   color: #d946ef;
 }
+
+.nav-menu.hidden {
+  display: none;
+}
+.menu-container.hidden {
+  display: none;
+}

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/hero.css" />
     <link rel="stylesheet" href="./css/aboutme.css" />
+
+    <link rel="stylesheet" href="css/queries.css" />
     <title>TokoDev &mdash; Portfolio</title>
   </head>
   <body>
@@ -30,13 +32,24 @@
           />
           <a href="#" class="logo-text">TokoDev</a>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links hidden">
           <li><a class="nav-link" href="#">Home</a></li>
           <li><a class="nav-link" href="#">About</a></li>
           <li><a class="nav-link" href="#">Skills</a></li>
           <li><a class="nav-link" href="#">Projects</a></li>
           <li><a class="nav-link" href="#">Contact</a></li>
         </ul>
+        <ion-icon class="nav-menu hidden" name="menu-outline"></ion-icon>
+
+        <div class="menu-container hidden">
+          <ul>
+            <li><a class="nav-menu-link" href="#">Home</a></li>
+            <li><a class="nav-menu-link" href="#">About</a></li>
+            <li><a class="nav-menu-link" href="#">Skills</a></li>
+            <li><a class="nav-menu-link" href="#">Projects</a></li>
+            <li><a class="nav-menu-link" href="#">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -78,7 +91,7 @@
             </div>
           </div>
 
-          <div class="grid-container-2">
+          <div class="grid-container-2 hidden">
             <div class="codeblock">
               <div class="code-animation" aria-label="Code sample animation">
                 <div class="code-line">

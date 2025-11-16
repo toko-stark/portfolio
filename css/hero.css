@@ -197,6 +197,10 @@
   height: 100%;
 }
 
+.grid-container-2.hidden {
+  display: show;
+}
+
 .codeblock {
   background: #111111;
   color: #fcfcfa;

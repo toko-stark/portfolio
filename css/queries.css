@@ -1,0 +1,280 @@
+@media (max-width: 1150px) {
+  .container--grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .grid-container-2.hidden {
+    display: none;
+  }
+
+  .section-hero {
+    height: auto;
+    padding: 4rem 0;
+  }
+
+  .section-about {
+    height: auto;
+  }
+
+  .aboutme-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .aboutme-container-2 {
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 830px) {
+  .container--grid {
+    padding: 2rem;
+  }
+
+  .nav-links.hidden {
+    display: none;
+  }
+  .nav-menu.hidden {
+    display: block;
+    font-size: 2.4rem;
+    color: #e0e0e0;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 700px) {
+  .aboutme-container-1,
+  .aboutme-container-2 {
+    padding: 12px;
+  }
+
+  .aboutme-description {
+    font-size: 18px;
+  }
+
+  .box {
+    padding: 24px 32px;
+  }
+
+  .box-number {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .container--grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .dev-showcase {
+    font-size: 1.4rem;
+  }
+  .rotator {
+    width: 210px;
+  }
+
+  .header {
+    --header-h: 54px;
+  }
+
+  .navbar {
+    padding: 0.45rem 0.65rem;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .logo {
+    gap: 0.5rem;
+  }
+
+  .logo-img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .menu-toggle {
+    padding: 0.4rem;
+    font-size: 1.3rem;
+  }
+
+  .nav-menu {
+    top: var(--header-h);
+    padding: 0.75rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+    font-size: 15px;
+    padding: 0.5rem 0;
+  }
+
+  .nav-link {
+    padding: 0.6rem 1rem;
+  }
+
+  .aboutme-container-1,
+  .aboutme-container-2 {
+    width: 80%;
+    padding: 8px;
+  }
+}
+
+/* <= 580px (mobile devices) */
+@media (max-width: 580px) {
+  .aboutme-container-1 {
+    padding: 1.5rem 1rem;
+    margin: 1rem auto;
+  }
+  .aboutme-container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem auto;
+  }
+
+  .aboutme-container {
+    padding: 1.5rem 1rem;
+    margin: 1rem auto;
+  }
+
+  .aboutme-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .aboutme-container p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .aboutme-grid {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .aboutme-description {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .boxes {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .box {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .box-number {
+    font-size: 24px;
+  }
+  .box-description {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .aboutme-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* <= 576px (large phones) */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .section-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .grid-container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .dev-showcase {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+
+  .rotator {
+    width: 180px;
+  }
+
+  .box-container-aboutme {
+    padding: 1rem;
+    width: 110%;
+  }
+  .aboutme-container-skills {
+    padding: 1rem;
+    width: 100%;
+  }
+  .aboutme-skill {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 4px;
+  }
+}
