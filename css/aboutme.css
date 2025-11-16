@@ -1,0 +1,146 @@
+.aboutme-title {
+  text-align: center;
+  padding: 48px 0;
+  background: linear-gradient(90deg, #e879f9 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-about {
+  background-color: #111111;
+  color: #ddd;
+  height: 70vh;
+  min-height: 700px;
+}
+
+.aboutme-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 60fr 40fr;
+  column-gap: 10px;
+}
+
+.aboutme-container-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 22px;
+}
+.aboutme-description {
+  font-size: 20px;
+  letter-spacing: 1;
+  line-height: 1.5;
+}
+
+.boxes {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.box {
+  padding: 32px 48px;
+  background-color: #000;
+  border-radius: 11px;
+  border: 1px solid #403e41;
+}
+
+.box-number {
+  text-align: center;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #e879f9 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.box-description {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 12px;
+  text-align: center;
+  color: #eee;
+  font-weight: 600;
+}
+
+.aboutme-container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px;
+}
+
+.box-container-aboutme {
+  background-color: #000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #403e41;
+  border-radius: 9px;
+  padding: 60px 40px;
+}
+
+.name {
+  font-size: 32px;
+  background: linear-gradient(90deg, #e879f9 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.location {
+  margin: 18px 0 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.aboutme-container-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.aboutme-skill {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #403e41;
+  background-color: #111111;
+  border-radius: 9px;
+  width: 300px;
+  height: 50px;
+}
+
+.aboutme-skill-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 0 12px;
+}
+
+.aboutme-skill-icon-- {
+  color: #d946ef;
+  width: 28px;
+  height: 28px;
+}
+
+.aboutme-skill-text {
+  font-size: 16px;
+  font-weight: 700;
+}

@@ -71,5 +71,6 @@
 
 .nav-link:hover,
 .nav-link:active {
+  border-bottom: 2px solid #d946ef;
   color: #d946ef;
 }
