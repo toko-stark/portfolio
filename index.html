@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/hero.css" />
     <link rel="stylesheet" href="./css/aboutme.css" />
     <link rel="stylesheet" href="./css/skills.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
 
     <link rel="stylesheet" href="css/queries.css" />
 
@@ -39,7 +40,6 @@
           <li><a class="nav-link" href="#">Home</a></li>
           <li><a class="nav-link" href="#">About</a></li>
           <li><a class="nav-link" href="#">Skills</a></li>
-          <li><a class="nav-link" href="#">Projects</a></li>
           <li><a class="nav-link" href="#">Contact</a></li>
         </ul>
         <ion-icon class="nav-menu hidden" name="menu-outline"></ion-icon>
@@ -181,16 +181,6 @@
                     ><span class="aboutme-skill-icon"
                       ><ion-icon
                         class="aboutme-skill-icon--"
-                        name="server-outline"
-                      ></ion-icon></span
-                    ><span class="aboutme-skill-text"
-                      >System Administrator</span
-                    ></span
-                  >
-                  <span class="aboutme-skill"
-                    ><span class="aboutme-skill-icon"
-                      ><ion-icon
-                        class="aboutme-skill-icon--"
                         name="school-outline"
                       ></ion-icon></span
                     ><span class="aboutme-skill-text"
@@ -279,14 +269,57 @@
         </div>
       </section>
 
-      <!-- Projects Section -->
-      <section class="section-projects">
-        <div class="container"></div>
-      </section>
-
       <!-- Contact Section -->
       <section class="section-contact">
-        <div class="container"></div>
+        <div class="container">
+          <div class="contact-box">
+            <h2>Get in Touch</h2>
+            <div class="grid-containert-contact">
+              <div class="contact-emailbox">
+                <div class="contact-box--mail">
+                  <div class="icon">
+                    <ion-icon
+                      class="contact-icon"
+                      name="mail-outline"
+                    ></ion-icon>
+                  </div>
+                  <a href="mailto:toko.stark@icloud.com"
+                    >toko.stark@icloud.com</a
+                  >
+                  <p class="contact-email">Email Me</p>
+                </div>
+              </div>
+              <form id="contact-form" class="form">
+                <h3>Contact Form</h3>
+                <div class="firstRow">
+                  <input
+                    type="text"
+                    class="input-field"
+                    placeholder="Your Name*"
+                    required
+                  />
+                  <input
+                    type="email"
+                    class="input-field"
+                    placeholder="Your Email*"
+                    required
+                  />
+                </div>
+                <div class="secondRow">
+                  <input type="text" placeholder="Subject*" required />
+                  <textarea
+                    class="input-field textarea-field"
+                    placeholder="Your Message*"
+                    required
+                  ></textarea>
+                </div>
+              </form>
+              <button id="submitButton" type="submit" form="contact-form">
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>
