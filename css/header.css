@@ -81,3 +81,9 @@
 .menu-container.hidden {
   display: none;
 }
+
+.nav-link.active,
+.nav-menu-link.active {
+  color: #a855f7;
+  border-bottom: 2px solid #a855f7;
+}
