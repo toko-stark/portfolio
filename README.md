@@ -42,6 +42,6 @@ portfolio/
 1. **Header** - Navigation with mobile menu
 2. **Hero** - Introduction with animated text
 3. **About** - Personal info and experience
-4. **Skills** - Technical abilities (Coming soon)
+4. **Skills** - Technical abilities 
 5. **Projects** - Portfolio showcase (Coming soon)
-6. **Contact** - Get in touch (Coming soon)
+6. **Contact** - Get in touch 
