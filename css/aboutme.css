@@ -48,6 +48,12 @@
   border: 1px solid #403e41;
 }
 
+.box:hover {
+  border: 1px solid #a855f7;
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
 .box-number {
   text-align: center;
   margin-bottom: 12px;
@@ -86,6 +92,12 @@
   border: 1px solid #403e41;
   border-radius: 9px;
   padding: 60px 40px;
+}
+
+.box-container-aboutme:hover {
+  border: 1px solid #a855f7;
+  transform: scale(1.05);
+  transition: 0.3s ease;
 }
 
 .name {
