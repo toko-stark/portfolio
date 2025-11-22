@@ -1,0 +1,137 @@
+.section-terminal {
+  background-color: #1e1e1e;
+  color: #c5c6c7;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 50px 20px;
+}
+
+.terminal-window {
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.terminal-window:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  scale: 1.02;
+}
+
+.terminal-header {
+  background-color: #3c3c3c;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.terminal-button.close {
+  background-color: #ff5f56;
+}
+.terminal-button.minimize {
+  background-color: #ffbd2e;
+}
+.terminal-button.maximize {
+  background-color: #27c93f;
+}
+
+.terminal-title {
+  flex-grow: 1;
+  text-align: center;
+  color: #c5c6c7;
+  font-weight: bold;
+}
+
+.terminal-body {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 200px;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.terminal-body::-webkit-scrollbar {
+  width: 10px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}
+
+.terminal-body {
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a4a #1e1e1e;
+}
+
+.terminal-line {
+  margin-bottom: 10px;
+}
+.terminal-line.input-line {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.terminal-prompt {
+  color: #6a9955;
+  flex: 0 0 auto;
+  padding-right: 8px;
+  line-height: 1.4;
+}
+
+.terminal-input {
+  background: none;
+  border: none;
+  color: #d4d4d4;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  outline: none;
+  width: auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-word;
+  padding: 0;
+  margin: 0;
+}
+
+.terminal-command {
+  color: #d4d4d4;
+}
+
+.terminal-input {
+  display: inline-block;
+  background: none;
+  border: none;
+  color: #d4d4d4;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  outline: none;
+  width: calc(100% - 20px);
+}

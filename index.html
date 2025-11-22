@@ -16,11 +16,12 @@
     <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/terminal.css" />
     <link rel="stylesheet" href="./css/aboutme.css" />
     <link rel="stylesheet" href="./css/skills.css" />
     <link rel="stylesheet" href="./css/contact.css" />
 
-    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
 
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <title>TokoDev &mdash; Portfolio</title>
@@ -119,6 +120,45 @@
                 </div>
                 <div class="code-line">}</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Terminal Section / Linux Webshell -->
+      <section id="terminal" class="section-terminal">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="terminal-button close"></span>
+              <span class="terminal-button minimize"></span>
+              <span class="terminal-button maximize"></span>
+            </div>
+            <div class="terminal-title">toko_stark@portfolio</div>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-command"
+                >Welcome to toko_stark's Portfolio!</span
+              >
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-command"
+                >Type 'help' to see available commands.</span
+              >
+            </div>
+            <div class="terminal-line input-line">
+              <span class="terminal-prompt">tokodev@portfolio:~$</span>
+              <input
+                class="terminal-input"
+                type="text"
+                aria-label="user input"
+              />
+            </div>
+            <div class="terminal-answer">
+              <span class="terminal-response"></span>
             </div>
           </div>
         </div>
@@ -323,6 +363,7 @@
       </section>
     </main>
 
+    <script src="./js/terminal.js"></script>
     <script src="./js/scrollEffect.js"></script>
   </body>
 </html>

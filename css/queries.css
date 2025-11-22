@@ -35,21 +35,42 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
+
+  .terminal-window {
+    max-width: 700px;
+  }
 }
 
-@media (max-width: 768px) {
-  .skills-grid {
+@media (max-width: 900px) {
+  .section-contact {
+    padding: 48px 0;
+  }
+  .contact-box {
+    padding: 20px;
+  }
+  .grid-containert-contact {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    padding: 16px;
+    gap: 20px;
+  }
+  .contact-emailbox {
+    padding: 20px;
+  }
+  #submitButton {
+    grid-row: 3;
   }
 
-  .skill-category h3 {
-    font-size: 1.4rem;
+  .section-terminal {
+    padding: 40px 15px;
   }
 
-  .skill-item {
-    font-size: 0.95rem;
-    padding: 0.6rem 1rem;
+  .terminal-window:hover {
+    scale: 1;
+  }
+
+  .terminal-window {
+    max-width: 100%;
+    min-width: 300px;
   }
 }
 
@@ -66,6 +87,59 @@
     font-size: 2.4rem;
     color: #e0e0e0;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1.4rem;
+  }
+
+  .skill-item {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .terminal-window {
+    max-width: 90%;
+    min-width: 280px;
+  }
+
+  .terminal-body {
+    padding: 15px;
+    font-size: 13px;
+    min-height: 150px;
+    max-height: 400px;
+  }
+
+  .terminal-header {
+    padding: 8px;
+  }
+
+  .terminal-title {
+    font-size: 13px;
+  }
+
+  .terminal-button {
+    width: 10px;
+    height: 10px;
+  }
+
+  .terminal-prompt {
+    font-size: 13px;
+  }
+
+  .terminal-input {
+    font-size: 13px;
+  }
+
+  .terminal-command {
+    font-size: 13px;
   }
 }
 
@@ -125,107 +199,31 @@
   .section-contact {
     padding: 32px 0;
   }
-  .contact-box {
-    padding: 16px;
+
+  .section-terminal {
+    padding: 30px 10px;
   }
-  .contact-box h2 {
-    font-size: 24px;
+
+  .terminal-window {
+    border-radius: 6px;
+    max-width: 95%;
+    min-width: 260px;
   }
-  .grid-containert-contact {
+
+  .terminal-body {
     padding: 12px;
-    gap: 16px;
-  }
-  .contact-emailbox {
-    padding: 16px;
-  }
-  .form input,
-  .form textarea {
-    font-size: 15px;
-    padding: 10px;
-  }
-  .form h3 {
-    font-size: 18px;
-  }
-  .grid-containert-contact button {
-    font-size: 15px;
-    padding: 10px 18px;
+    font-size: 12px;
+    min-height: 120px;
+    max-height: 350px;
   }
 }
 
-@media (max-width: 560px) {
-  .container {
-    padding: 0 1rem;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-  .container--grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-
-  .hero-title {
-    font-size: 2.8rem;
-  }
-  .dev-showcase {
-    font-size: 1.4rem;
-  }
-  .rotator {
-    width: 210px;
-  }
-
-  .header {
-    --header-h: 54px;
-  }
-
-  .navbar {
-    padding: 0.45rem 0.65rem;
-  }
-
-  .logo-text {
-    display: none;
-  }
-
-  .logo {
-    gap: 0.5rem;
-  }
-
-  .logo-img {
-    width: 46px;
-    height: 46px;
-  }
-
-  .menu-toggle {
-    padding: 0.4rem;
-    font-size: 1.3rem;
-  }
-
-  .nav-menu {
-    top: var(--header-h);
-    padding: 0.75rem;
-  }
-
-  .nav-links {
-    gap: 0.5rem;
-    font-size: 15px;
-    padding: 0.5rem 0;
-  }
-
-  .nav-link {
-    padding: 0.6rem 1rem;
-  }
-
-  .aboutme-container-1,
-  .aboutme-container-2 {
-    width: 80%;
-    padding: 8px;
+@media (max-width: 620px) {
+  .section-terminal {
+    padding: 35px 20px;
   }
 }
 
-/* <= 580px (mobile devices) */
 @media (max-width: 580px) {
   .aboutme-container-1 {
     padding: 1.5rem 1rem;
@@ -348,15 +346,183 @@
     font-size: 0.85rem;
     padding: 0.5rem 0.75rem;
   }
+
+  .terminal-window {
+    max-width: 100%;
+    min-width: 230px;
+  }
+
+  .terminal-body {
+    padding: 9px;
+    font-size: 10.5px;
+    min-height: 110px;
+    max-height: 280px;
+  }
 }
 
-/* <= 576px (large phones) */
 @media (max-width: 576px) {
   .container {
     padding: 0 0.75rem;
   }
   body {
     font-size: 15px;
+  }
+
+  .section-terminal {
+    padding: 20px 15px;
+  }
+
+  .terminal-window {
+    max-width: 100%;
+    min-width: 225px;
+  }
+
+  .terminal-body {
+    padding: 8px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .container--grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .dev-showcase {
+    font-size: 1.4rem;
+  }
+  .rotator {
+    width: 210px;
+  }
+
+  .header {
+    --header-h: 54px;
+  }
+
+  .navbar {
+    padding: 0.45rem 0.65rem;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .logo {
+    gap: 0.5rem;
+  }
+
+  .logo-img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .menu-toggle {
+    padding: 0.4rem;
+    font-size: 1.3rem;
+  }
+
+  .nav-menu {
+    top: var(--header-h);
+    padding: 0.75rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+    font-size: 15px;
+    padding: 0.5rem 0;
+  }
+
+  .nav-link {
+    padding: 0.6rem 1rem;
+  }
+
+  .aboutme-container-1,
+  .aboutme-container-2 {
+    width: 80%;
+    padding: 8px;
+  }
+
+  .terminal-window {
+    max-width: 100%;
+    min-width: 240px;
+  }
+
+  .terminal-header {
+    padding: 6px;
+  }
+
+  .terminal-buttons {
+    gap: 6px;
+  }
+
+  .terminal-button {
+    width: 8px;
+    height: 8px;
+  }
+
+  .terminal-title {
+    font-size: 12px;
+  }
+
+  .terminal-body {
+    padding: 10px;
+    font-size: 11px;
+    min-height: 120px;
+    max-height: 300px;
+  }
+
+  .terminal-line {
+    margin-bottom: 8px;
+  }
+
+  .terminal-prompt {
+    font-size: 11px;
+    padding-right: 6px;
+  }
+
+  .terminal-input {
+    font-size: 11px;
+  }
+
+  .terminal-command {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    --header-h: 50px;
+    padding: 0 10px;
+  }
+
+  .navbar {
+    padding: 0.35rem 0.5rem;
+  }
+
+  .logo-img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .nav-menu {
+    font-size: 2rem;
+  }
+
+  .section-terminal {
+    padding: 20px 12px;
   }
 }
 
@@ -424,42 +590,45 @@
     padding: 8px 12px;
     margin: 4px;
   }
-}
 
-@media (max-width: 430px) {
-  .skills-title {
-    font-size: 1.75rem;
+  .section-terminal {
+    padding: 25px 8px;
   }
 
-  .skill-category {
-    padding: 1rem;
+  .terminal-window {
+    border-radius: 4px;
+    max-width: 100%;
+    min-width: 220px;
   }
 
-  .skill-category h3 {
-    font-size: 1.1rem;
+  .terminal-window:hover {
+    scale: 1;
   }
 
-  .skill-item {
-    font-size: 0.8rem;
-    padding: 0.45rem 0.65rem;
+  .terminal-body {
+    padding: 8px;
+    font-size: 10px;
+    min-height: 100px;
+    max-height: 250px;
   }
-}
-@media (max-width: 900px) {
-  .section-contact {
-    padding: 48px 0;
+
+  .terminal-title {
+    font-size: 11px;
   }
-  .contact-box {
-    padding: 20px;
+
+  .terminal-line {
+    margin-bottom: 6px;
   }
-  .grid-containert-contact {
-    grid-template-columns: 1fr;
-    padding: 16px;
-    gap: 20px;
+
+  .terminal-prompt {
+    font-size: 10px;
   }
-  .contact-emailbox {
-    padding: 20px;
+
+  .terminal-input {
+    font-size: 10px;
   }
-  #submitButton {
-    grid-row: 3;
+
+  .terminal-command {
+    font-size: 10px;
   }
 }
