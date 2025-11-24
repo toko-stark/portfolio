@@ -632,3 +632,54 @@
     font-size: 10px;
   }
 }
+
+/* SKILL SECTION */
+
+@media (max-width: 900px) {
+  .tech-stack-box {
+    width: 140px;
+    height: 140px;
+  }
+  .tech-stack-logo {
+    width: 82px;
+    height: 82px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-heading {
+    font-size: 2rem;
+    letter-spacing: 0.25rem;
+  }
+  .frontend-dev-heading {
+    font-size: 1.7rem;
+    margin-bottom: 2.4rem;
+  }
+  .tech-stack-wrapper {
+    gap: 1.6rem;
+  }
+  .tech-stack-box {
+    width: 125px;
+    height: 125px;
+    border-radius: 22px;
+  }
+  .tech-stack-logo {
+    width: 72px;
+    height: 72px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .tech-stack-box {
+    width: 110px;
+    height: 110px;
+  }
+  .tech-stack-logo {
+    width: 64px;
+    height: 64px;
+  }
+  .tooltip {
+    font-size: 0.75rem;
+  }
+}
