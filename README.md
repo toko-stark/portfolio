@@ -10,14 +10,18 @@ Check out the live site: [https://tokodev-portfolio.netlify.app/](https://tokode
 
 - Responsive design that works on all devices
 - Mobile-friendly navigation menu with blur overlay
-- Animated hero section with rotating text
-- About me section with skills showcase
-- Smooth scrolling and modern UI
+- Animated hero section with rotating text showcase
+- Interactive terminal/webshell section with custom commands
+- About me section with experience metrics
+- Tech stack showcase with hover tooltips
+- Contact section with integrated form
+- Smooth scrolling and modern glassmorphic UI
+- Custom CSS animations and transitions
 
 ## 🛠️ Technologies
 
 - HTML5
-- CSS3 (with responsive media queries)
+- CSS3 (with CSS Grid, Flexbox, and responsive media queries)
 - JavaScript (ES6+)
 - Ionicons
 
@@ -26,22 +30,29 @@ Check out the live site: [https://tokodev-portfolio.netlify.app/](https://tokode
 ```
 portfolio/
 ├── css/
-│   ├── general.css
-│   ├── header.css
-│   ├── hero.css
-│   ├── aboutme.css
-│   ├── queries.cs
+│   ├── general.css      # Global styles and utilities
+│   ├── header.css       # Navigation and header styles
+│   ├── hero.css         # Hero section with animations
+│   ├── terminal.css     # Terminal/webshell styling
+│   ├── aboutme.css      # About section layouts
+│   ├── skills.css       # Tech stack grid and cards
+│   ├── contact.css      # Contact form styling
+│   └── queries.css      # Media queries for responsiveness
+├── js/
+│   ├── terminal.js      # Terminal command logic
+│   └── scrollEffect.js  # Scroll animations
 ├── assets/
-│   └── profile.webp
-│   ├── favicon.ico
-└── index.html
+│   ├── icons/           # Tech stack SVG icons
+│   ├── profile.webp     # Profile image
+│   └── favicon.ico      # Site favicon
+└── index.html           # Main HTML file
 ```
 
 ## 🎨 Sections
 
-1. **Header** - Navigation with mobile menu
-2. **Hero** - Introduction with animated text
-3. **About** - Personal info and experience
-4. **Skills** - Technical abilities 
-5. **Projects** - Portfolio showcase (Coming soon)
-6. **Contact** - Get in touch 
+1. **Header** - Sticky navigation with mobile menu and logo
+2. **Hero** - Introduction with animated rotating developer roles and social links
+3. **Terminal** - Interactive Linux-style terminal with custom commands
+4. **About** - Personal info, background, and experience metrics
+5. **Skills** - Tech stack showcase with hover effects and tooltips
+6. **Contact** - Email info and contact form
