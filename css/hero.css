@@ -1,6 +1,6 @@
 .section-hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   min-height: 640px;
   display: grid;
   place-items: center;
