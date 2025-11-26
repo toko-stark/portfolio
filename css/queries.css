@@ -1,7 +1,9 @@
+/* For Large Tablets and Smaller (1150px) */
 @media (max-width: 1150px) {
   .container--grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding-top: 5rem;
   }
 
   .grid-container-2.hidden {
@@ -41,21 +43,26 @@
   }
 }
 
+/* For Medium Tablets (900px) */
 @media (max-width: 900px) {
   .section-contact {
     padding: 48px 0;
   }
+
   .contact-box {
     padding: 20px;
   }
+
   .grid-containert-contact {
     grid-template-columns: 1fr;
     padding: 16px;
     gap: 20px;
   }
+
   .contact-emailbox {
     padding: 20px;
   }
+
   #submitButton {
     grid-row: 3;
   }
@@ -64,24 +71,37 @@
     padding: 40px 15px;
   }
 
-  .terminal-window:hover {
-    scale: 1;
-  }
-
   .terminal-window {
     max-width: 100%;
     min-width: 300px;
   }
+
+  .terminal-window:hover {
+    scale: 1;
+  }
+
+  .tech-stack-box {
+    width: 140px;
+    height: 140px;
+  }
+
+  .tech-stack-logo {
+    width: 82px;
+    height: 82px;
+  }
 }
 
+/* For Small Tablets (830px) */
 @media (max-width: 830px) {
   .container--grid {
     padding: 2rem;
+    padding-top: 6rem;
   }
 
   .nav-links.hidden {
     display: none;
   }
+
   .nav-menu.hidden {
     display: block;
     font-size: 2.4rem;
@@ -90,6 +110,7 @@
   }
 }
 
+/* For Large Mobile Landscape (768px) */
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: 1fr;
@@ -141,8 +162,13 @@
   .terminal-command {
     font-size: 13px;
   }
+
+  .container--grid {
+    padding-top: 6rem;
+  }
 }
 
+/* For Mobile Landscape (700px) */
 @media (max-width: 700px) {
   .aboutme-container-1,
   .aboutme-container-2 {
@@ -169,28 +195,35 @@
   .contact-box {
     padding: 16px;
   }
+
   .contact-box h2 {
     font-size: 24px;
   }
+
   .grid-containert-contact {
     grid-template-columns: 1fr;
     padding: 12px;
     gap: 16px;
   }
+
   .contact-emailbox {
     padding: 16px;
   }
+
   .contact-box--mail {
     padding: 18px;
   }
+
   .form input,
   .form textarea {
     font-size: 15px;
     padding: 10px;
   }
+
   .form h3 {
     font-size: 18px;
   }
+
   .grid-containert-contact button {
     font-size: 15px;
     padding: 10px 18px;
@@ -216,19 +249,55 @@
     min-height: 120px;
     max-height: 350px;
   }
+
+  .section-hero {
+    padding-top: 64px;
+  }
 }
 
+/* For Mobile Landscape Small (620px) */
 @media (max-width: 620px) {
   .section-terminal {
     padding: 35px 20px;
   }
 }
 
+/* For Mobile Landscape Small (600px) */
+@media (max-width: 600px) {
+  .skill-heading {
+    font-size: 2rem;
+    letter-spacing: 0.25rem;
+  }
+
+  .frontend-dev-heading {
+    font-size: 1.7rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .tech-stack-wrapper {
+    gap: 1.6rem;
+  }
+
+  .tech-stack-box {
+    width: 125px;
+    height: 125px;
+    border-radius: 22px;
+  }
+
+  .tech-stack-logo {
+    width: 72px;
+    height: 72px;
+    padding: 10px;
+  }
+}
+
+/* For Mobile Portrait (580px) */
 @media (max-width: 580px) {
   .aboutme-container-1 {
     padding: 1.5rem 1rem;
     margin: 1rem auto;
   }
+
   .aboutme-container-2 {
     display: flex;
     flex-direction: column;
@@ -253,8 +322,12 @@
   }
 
   .aboutme-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     max-width: 100%;
     min-height: auto;
+    justify-content: center;
+    align-items: center;
   }
 
   .aboutme-description {
@@ -277,44 +350,45 @@
   .box-number {
     font-size: 24px;
   }
+
   .box-description {
     display: block;
     font-size: 14px;
     text-align: center;
   }
 
-  .aboutme-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    justify-content: center;
-    align-items: center;
-  }
-
   .contact-box {
     border-radius: 8px;
     padding: 12px;
   }
+
   .contact-box h2 {
     font-size: 20px;
   }
+
   .grid-containert-contact {
     padding: 8px;
     gap: 12px;
   }
+
   .contact-emailbox {
     padding: 12px;
   }
+
   .contact-box--mail a {
     font-size: 16px;
   }
+
   .contact-icon {
     font-size: 40px;
   }
+
   .form input,
   .form textarea {
     font-size: 14px;
     padding: 8px;
   }
+
   .grid-containert-contact button {
     font-size: 14px;
     padding: 8px 16px;
@@ -360,10 +434,12 @@
   }
 }
 
+/* For Mobile Portrait (576px) */
 @media (max-width: 576px) {
   .container {
     padding: 0 0.75rem;
   }
+
   body {
     font-size: 15px;
   }
@@ -383,6 +459,7 @@
   }
 }
 
+/* For Mobile Portrait (560px) */
 @media (max-width: 560px) {
   .container {
     padding: 0 1rem;
@@ -391,6 +468,7 @@
     box-sizing: border-box;
     overflow-x: hidden;
   }
+
   .container--grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -401,9 +479,11 @@
   .hero-title {
     font-size: 2.8rem;
   }
+
   .dev-showcase {
     font-size: 1.4rem;
   }
+
   .rotator {
     width: 210px;
   }
@@ -417,7 +497,7 @@
   }
 
   .logo-text {
-    display: none;
+    font-size: 1.5rem;
   }
 
   .logo {
@@ -502,6 +582,7 @@
   }
 }
 
+/* For Mobile Portrait (550px) */
 @media (max-width: 550px) {
   .header {
     --header-h: 50px;
@@ -526,11 +607,13 @@
   }
 }
 
+/* For Small Mobile (430px) */
 @media (max-width: 430px) {
   .section-hero {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 54px;
   }
 
   .hero-grid {
@@ -581,10 +664,12 @@
     padding: 1rem;
     width: 110%;
   }
+
   .aboutme-container-skills {
     padding: 1rem;
     width: 100%;
   }
+
   .aboutme-skill {
     font-size: 14px;
     padding: 8px 12px;
@@ -633,53 +718,23 @@
   }
 }
 
-/* SKILL SECTION */
-
-@media (max-width: 900px) {
-  .tech-stack-box {
-    width: 140px;
-    height: 140px;
-  }
-  .tech-stack-logo {
-    width: 82px;
-    height: 82px;
-  }
-}
-
-@media (max-width: 600px) {
-  .skill-heading {
-    font-size: 2rem;
-    letter-spacing: 0.25rem;
-  }
-  .frontend-dev-heading {
-    font-size: 1.7rem;
-    margin-bottom: 2.4rem;
-  }
-  .tech-stack-wrapper {
-    gap: 1.6rem;
-  }
-  .tech-stack-box {
-    width: 125px;
-    height: 125px;
-    border-radius: 22px;
-  }
-  .tech-stack-logo {
-    width: 72px;
-    height: 72px;
-    padding: 10px;
-  }
-}
-
+/* For Extra Small Mobile (420px) */
 @media (max-width: 420px) {
   .tech-stack-box {
     width: 110px;
     height: 110px;
   }
+
   .tech-stack-logo {
     width: 64px;
     height: 64px;
   }
+
   .tooltip {
     font-size: 0.75rem;
+  }
+
+  .container--grid {
+    padding-top: 6rem;
   }
 }

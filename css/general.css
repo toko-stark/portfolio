@@ -30,7 +30,6 @@ body {
   transform: translateY(0);
 }
 
-/* Optional directional variants */
 .reveal-left {
   transform: translateX(-50px);
 }
