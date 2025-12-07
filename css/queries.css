@@ -41,6 +41,16 @@
   .terminal-window {
     max-width: 700px;
   }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    padding: 0 1rem;
+    gap: 1.75rem;
+  }
+
+  .project-image {
+    height: 180px;
+  }
 }
 
 /* For Medium Tablets (900px) */
@@ -88,6 +98,18 @@
   .tech-stack-logo {
     width: 82px;
     height: 82px;
+  }
+
+  .projects-grid {
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    border-radius: 10px;
+  }
+
+  .project-image {
+    height: 170px;
   }
 }
 
@@ -252,6 +274,15 @@
 
   .section-hero {
     padding-top: 64px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .project-image {
+    height: 165px;
   }
 }
 
@@ -432,6 +463,15 @@
     min-height: 110px;
     max-height: 280px;
   }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .project-image {
+    height: 155px;
+  }
 }
 
 /* For Mobile Portrait (576px) */
@@ -456,6 +496,19 @@
   .terminal-body {
     padding: 8px;
     font-size: 10px;
+  }
+
+  .projects-grid {
+    gap: 1.25rem;
+  }
+
+  .project-image {
+    height: 155px;
+  }
+
+  .buttons-projects {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
@@ -736,5 +789,13 @@
 
   .container--grid {
     padding-top: 6rem;
+  }
+
+  .projects-grid {
+    padding: 0;
+  }
+
+  .project-image {
+    height: 145px;
   }
 }
