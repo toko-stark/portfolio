@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./css/terminal.css" />
     <link rel="stylesheet" href="./css/aboutme.css" />
     <link rel="stylesheet" href="./css/skills.css" />
+    <link rel="stylesheet" href="./css/projects.css" />
     <link rel="stylesheet" href="./css/contact.css" />
 
     <link rel="stylesheet" href="./css/queries.css" />
@@ -42,6 +43,7 @@
           <li><a class="nav-link" href="#terminal">Terminal</a></li>
           <li><a class="nav-link" href="#aboutme">About</a></li>
           <li><a class="nav-link" href="#skill">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <ion-icon class="nav-menu hidden" name="menu-outline"></ion-icon>
@@ -323,6 +325,167 @@
         </div>
       </section>
 
+      <!-- Project Section -->
+      <section class="section-projects" id="projects">
+        <div class="container">
+          <h1 class="projects-title">Projects</h1>
+          <div class="projects-grid">
+            <div class="project-card">
+              <img
+                src="./assets/projects/omnifood.png"
+                alt="Omnifood Project"
+                class="project-image"
+              />
+              <h3 class="project-title">Omnifood</h3>
+              <p class="project-description">
+                A responsive food delivery landing page from Jonas Schmedtmann's
+                HTML5 CSS3 course. Built with semantic HTML and modern CSS
+                techniques, showcasing responsive design principles.
+              </p>
+              <div class="buttons-projects">
+                <a
+                  href="https://github.com/toko-stark/omnifood"
+                  class="btn btn--primary project-link --disabled"
+                  target="_blank"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/toko-stark/omnifood"
+                  class="btn btn--primary github-link"
+                  target="_blank"
+                  >View Code</a
+                >
+              </div>
+              <div class="techstack-project">
+                <span class="techstack-item">
+                  <span class="techstack-text">HTML</span>
+                </span>
+                <span class="techstack-item">
+                  <span class="techstack-text">CSS</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img
+                src="./assets/projects/nutrivision.png"
+                alt="NutriVisionAI Project"
+                class="project-image"
+              />
+              <h3 class="project-title">Nutri Vision AI</h3>
+              <p class="project-description">
+                An AI-powered nutrition analysis tool that provides personalized
+                dietary recommendations based on user input and health goals.
+                Helps users achieve their calorie goals.
+              </p>
+              <div class="buttons-projects">
+                <a
+                  href="https://github.com/toko-stark/NutriVisionAI"
+                  class="btn btn--primary project-link"
+                  target="_blank"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/toko-stark/NutriVisionAI"
+                  class="btn btn--primary github-link"
+                  target="_blank"
+                  >View Code</a
+                >
+              </div>
+              <div class="techstack-project">
+                <span class="techstack-item">
+                  <span class="techstack-text">HTML</span>
+                </span>
+                <span class="techstack-item">
+                  <span class="techstack-text">CSS</span>
+                </span>
+                <span class="techstack-item">
+                  <span class="techstack-text">JavaScript</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img
+                src="./assets/projects/portfolio.png"
+                alt="Portfolio Project"
+                class="project-image"
+              />
+              <h3 class="project-title">My Portfolio</h3>
+              <p class="project-description">
+                My personal portfolio website showcasing my projects, skills,
+                and experience as a full-stack developer. Built with modern CSS
+                animations and responsive design.
+              </p>
+              <div class="buttons-projects">
+                <a
+                  href="https://tokodev-portfolio.netlify.app/"
+                  class="btn btn--primary project-link"
+                  target="_blank"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/toko-stark/portfolio"
+                  class="btn btn--primary github-link"
+                  target="_blank"
+                  >View Code</a
+                >
+              </div>
+              <div class="techstack-project">
+                <span class="techstack-item">
+                  <span class="techstack-text">HTML</span>
+                </span>
+                <span class="techstack-item">
+                  <span class="techstack-text">CSS</span>
+                </span>
+                <span class="techstack-item">
+                  <span class="techstack-text">JavaScript</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img
+                src="./assets/projects/100-days.png"
+                alt="100 Days of Projects"
+                class="project-image"
+              />
+              <h3 class="project-title">100 Days of Projects</h3>
+              <p class="project-description">
+                A daily coding challenge to improve frontend development skills.
+                Building a new project every day to master HTML, CSS, and
+                JavaScript concepts.
+              </p>
+              <div class="buttons-projects">
+                <a
+                  href="#"
+                  class="btn btn--primary project-link --disabled"
+                  target="_blank"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/toko-stark/100-days-of-projects"
+                  class="btn btn--primary github-link"
+                  target="_blank"
+                  >View Code</a
+                >
+              </div>
+              <div class="techstack-project">
+                <span class="techstack-item">
+                  <span class="techstack-text">JavaScript</span>
+                </span>
+                <span class="techstack-item">
+                  <span class="techstack-text">HTML</span>
+                </span>
+                <span class="techstack-item">
+                  <span class="techstack-text">CSS</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Contact Section -->
       <section id="contact" class="section-contact">
         <div class="container">
@@ -387,5 +550,6 @@
 
     <script src="./js/terminal.js"></script>
     <script src="./js/scrollEffect.js"></script>
+    <script src="./js/projectHover.js"></script>
   </body>
 </html>
