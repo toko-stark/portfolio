@@ -53,6 +53,7 @@ portfolio/
 1. **Header** - Sticky navigation with mobile menu and logo
 2. **Hero** - Introduction with animated rotating developer roles and social links
 3. **Terminal** - Interactive Linux-style terminal with custom commands
-4. **About** - Personal info, background, and experience metrics
+4. **About** - Personal information, background, and experience metrics
 5. **Skills** - Tech stack showcase with hover effects and tooltips
-6. **Contact** - Email info and contact form
+6. **Projects** - Featured projects and portfolio work samples
+7. **Contact** - Email information and contact form
