@@ -83,12 +83,12 @@
 }
 
 .rotator {
-  margin-left: 12px;
+  margin-left: 7px;
   position: relative;
   display: inline-block;
   --rotator-ch: 10;
-  width: 244px;
-  height: 1.6em;
+  width: 280px;
+  height: 1.9em;
   overflow: hidden;
 }
 
