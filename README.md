@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my work as a full-stack develo
 
 ## 🌐 Live Preview
 
-Check out the live site: [https://tokodev-portfolio.netlify.app/](https://tokodev-portfolio.netlify.app/)
+Check out the live demo site: [https://tokodev-portfolio.netlify.app/](https://tokodev-portfolio.netlify.app/)
 
 ## 🚀 Features
 
