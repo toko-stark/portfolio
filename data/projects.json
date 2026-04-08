@@ -1,0 +1,101 @@
+[
+  {
+    "id": "100-days-of-projects",
+    "title": "100 Days of Projects",
+    "description": "A personal challenge to build a new frontend project every day to improve HTML, CSS, and JavaScript skills.",
+    "image": "./assets/projects/100-days.svg",
+    "private": false,
+    "liveDemo": null,
+    "github": "https://github.com/toko-stark/100-days-of-projects",
+    "techStack": ["JavaScript", "HTML", "CSS"],
+    "updatedAt": "2026-01-08"
+  },
+  {
+    "id": "portfolio",
+    "title": "Portfolio",
+    "description": "My personal developer portfolio showcasing my projects, skills, and experience. Built with modern CSS and vanilla JavaScript.",
+    "image": "./assets/projects/portfolio.svg",
+    "private": false,
+    "liveDemo": "https://tokodev-portfolio.netlify.app/",
+    "github": "https://github.com/toko-stark/portfolio",
+    "techStack": ["HTML", "CSS", "JavaScript"],
+    "updatedAt": "2026-01-01"
+  },
+  {
+    "id": "readme-generator",
+    "title": "ReadMe Generator",
+    "description": "An AI-powered tool that generates structured README files for GitHub repositories automatically from repo data.",
+    "image": "./assets/projects/readmegen.svg",
+    "private": false,
+    "liveDemo": null,
+    "github": "https://github.com/toko-stark/readme-generator",
+    "techStack": ["CSS", "JavaScript"],
+    "updatedAt": "2025-12-11"
+  },
+  {
+    "id": "omnifood",
+    "title": "Omnifood",
+    "description": "A responsive food delivery landing page built during Jonas Schmedtmann's HTML5 & CSS3 course. Showcases modern responsive design principles.",
+    "image": "./assets/projects/omnifood.svg",
+    "private": false,
+    "liveDemo": "https://tokodev-omnifood.netlify.app/",
+    "github": "https://github.com/toko-stark/omnifood",
+    "techStack": ["HTML", "CSS"],
+    "updatedAt": "2025-12-07"
+  },
+  {
+    "id": "nutrivision-ai",
+    "title": "NutriVision AI",
+    "description": "A frontend-only nutrition tracking app that uses AI to analyze meals and provide macro breakdowns for health-conscious users.",
+    "image": "./assets/projects/nutrivision.svg",
+    "private": false,
+    "liveDemo": "https://tokodev-nutrivisionai.netlify.app/",
+    "github": "https://github.com/toko-stark/NutriVisionAI",
+    "techStack": ["CSS", "JavaScript"],
+    "updatedAt": "2025-12-05"
+  },
+  {
+    "id": "donut-macro",
+    "title": "DonutSMP Macros",
+    "description": "Priavte Macros for the DonutSMP.net with JsMacro Mod",
+    "image": "./assets/projects/donut-macro.svg",
+    "private": true,
+    "liveDemo": null,
+    "github": null,
+    "techStack": ["JavaScript"],
+    "updatedAt": "2026-04-03"
+  },
+  {
+    "id": "afk-client",
+    "title": "Mineflayer Afk Client",
+    "description": "A private AFK client with anti-raid protection.",
+    "image": "./assets/projects/afk-client.svg",
+    "private": true,
+    "liveDemo": null,
+    "github": null,
+    "techStack": ["JavaScript"],
+    "updatedAt": "2026-04-03"
+  },
+  {
+    "id": "fakescoreboard-mod",
+    "title": "Fake Scoreboard Mod for Minecraft 1.21",
+    "description": "A private Minecraft client-side mod. Source code is not publicly available.",
+    "image": "./assets/projects/fakescoreboard.svg",
+    "private": true,
+    "liveDemo": null,
+    "github": null,
+    "techStack": ["Java"],
+    "updatedAt": "2026-01-25"
+  },
+  {
+    "id": "bedrock-commandline-bot",
+    "title": "Bedrock AFK Client (Command Line)",
+    "description": "A private command-line bot for Minecraft Bedrock servers. Source code is not publicly available.",
+    "image": "./assets/projects/bedrock-bot.svg",
+    "private": true,
+    "liveDemo": null,
+    "github": null,
+    "techStack": ["JavaScript"],
+    "updatedAt": "2026-01-24"
+  }
+]

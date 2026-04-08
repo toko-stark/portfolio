@@ -137,7 +137,10 @@
 
       <!-- Terminal Section / Linux Webshell -->
       <section id="terminal" class="section-terminal">
-        <h1 class="skill-heading">Terminal</h1>
+        <div class="terminal-section-header">
+          <h1 class="terminal-section-title">&gt;_ Terminal</h1>
+          <p class="terminal-section-subtitle">Type <code>help</code> to see available commands</p>
+        </div>
         <div class="terminal-window">
           <div class="terminal-header">
             <div class="terminal-buttons">
@@ -145,20 +148,16 @@
               <span class="terminal-button minimize"></span>
               <span class="terminal-button maximize"></span>
             </div>
-            <div class="terminal-title">toko_stark@portfolio</div>
+            <div class="terminal-title">toko_stark@portfolio:~</div>
           </div>
           <div class="terminal-body">
             <div class="terminal-line">
-              <span class="terminal-prompt">$</span>
-              <span class="terminal-command"
-                >Welcome to toko_stark's Portfolio!</span
-              >
+              <span class="terminal-prompt-static">~$</span>
+              <span class="terminal-welcome">Welcome to toko_stark's portfolio terminal.</span>
             </div>
             <div class="terminal-line">
-              <span class="terminal-prompt">$</span>
-              <span class="terminal-command"
-                >Type 'help' to see available commands.</span
-              >
+              <span class="terminal-prompt-static">~$</span>
+              <span class="terminal-welcome">Type <span class="terminal-highlight">'help'</span> to see available commands.</span>
             </div>
             <div class="terminal-line input-line">
               <span class="terminal-prompt">tokodev@portfolio:~$</span>
@@ -166,10 +165,9 @@
                 class="terminal-input"
                 type="text"
                 aria-label="user input"
+                autocomplete="off"
+                spellcheck="false"
               />
-            </div>
-            <div class="terminal-answer">
-              <span class="terminal-response"></span>
             </div>
           </div>
         </div>
@@ -182,16 +180,16 @@
           <div class="aboutme-grid">
             <div class="aboutme-container-1">
               <p class="aboutme-description --1">
-                I’m a 16-year-old passionate full-stack developer from Germany,
+                I’m a passionate self-taught full-stack developer from Germany,
                 gaining most of my experience through self-driven projects. I
-                constantly aim to improve with every project I take on and enjoy
-                designing thoughtful solutions for real-time, practical
-                problems.
+                constantly push myself to improve with every project I take on
+                and enjoy building thoughtful solutions to real problems.
               </p>
               <p class="aboutme-description --2">
-                My journey began with creating Minecraft scripts in JavaScript.
-                From there, I continued learning HTML5, CSS3, and JavaScript,
-                and I’m actively taking courses to further expand my skill set.
+                My journey started with Minecraft scripting in JavaScript and
+                grew into web development, Discord bots, and AI-powered tools.
+                I’m actively learning and taking courses to keep expanding my
+                skill set.
               </p>
 
               <div class="boxes">
@@ -200,7 +198,7 @@
                   <p class="box-description">Years Experience</p>
                 </div>
                 <div class="box">
-                  <h3 class="box-number">2</h3>
+                  <h3 class="box-number">10+</h3>
                   <p class="box-description">Active Projects</p>
                 </div>
                 <div class="box">
@@ -330,197 +328,7 @@
       <section class="section-projects" id="projects">
         <div class="container">
           <h1 class="projects-title">Projects</h1>
-          <div class="projects-grid">
-            <div class="project-card">
-              <img
-                src="./assets/projects/omnifood.png"
-                alt="Omnifood Project"
-                class="project-image"
-              />
-              <h3 class="project-title">Omnifood</h3>
-              <p class="project-description">
-                A responsive food delivery landing page from Jonas Schmedtmann's
-                HTML5 CSS3 course. Built with semantic HTML and modern CSS
-                techniques, showcasing responsive design principles.
-              </p>
-              <div class="buttons-projects">
-                <a
-                  href="https://tokodev-omnifood.netlify.app/"
-                  class="btn btn--primary project-link"
-                  target="_blank"
-                  >Live Demo</a
-                >
-                <a
-                  href="https://github.com/toko-stark/omnifood"
-                  class="btn btn--primary github-link"
-                  target="_blank"
-                  >View Code</a
-                >
-              </div>
-              <div class="techstack-project">
-                <span class="techstack-item">
-                  <span class="techstack-text">HTML</span>
-                </span>
-                <span class="techstack-item">
-                  <span class="techstack-text">CSS</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <img
-                src="./assets/projects/nutrivision.png"
-                alt="NutriVisionAI Project"
-                class="project-image"
-              />
-              <h3 class="project-title">Nutri Vision AI</h3>
-              <p class="project-description">
-                An AI-powered nutrition analysis tool that provides personalized
-                dietary recommendations based on user input and health goals.
-                Helps users achieve their calorie goals.
-              </p>
-              <div class="buttons-projects">
-                <a
-                  href="https://tokodev-nutrivisionai.netlify.app/"
-                  class="btn btn--primary project-link"
-                  target="_blank"
-                  >Live Demo</a
-                >
-                <a
-                  href="https://github.com/toko-stark/NutriVisionAI"
-                  class="btn btn--primary github-link"
-                  target="_blank"
-                  >View Code</a
-                >
-              </div>
-              <div class="techstack-project">
-                <span class="techstack-item">
-                  <span class="techstack-text">HTML</span>
-                </span>
-                <span class="techstack-item">
-                  <span class="techstack-text">CSS</span>
-                </span>
-                <span class="techstack-item">
-                  <span class="techstack-text">JavaScript</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <img
-                src="./assets/projects/portfolio.png"
-                alt="Portfolio Project"
-                class="project-image"
-              />
-              <h3 class="project-title">My Portfolio</h3>
-              <p class="project-description">
-                My personal portfolio website showcasing my projects, skills,
-                and experience as a full-stack developer. Built with modern CSS
-                animations and responsive design.
-              </p>
-              <div class="buttons-projects">
-                <a
-                  href="https://tokodev-portfolio.netlify.app/"
-                  class="btn btn--primary project-link"
-                  target="_blank"
-                  >Live Demo</a
-                >
-                <a
-                  href="https://github.com/toko-stark/portfolio"
-                  class="btn btn--primary github-link"
-                  target="_blank"
-                  >View Code</a
-                >
-              </div>
-              <div class="techstack-project">
-                <span class="techstack-item">
-                  <span class="techstack-text">HTML</span>
-                </span>
-                <span class="techstack-item">
-                  <span class="techstack-text">CSS</span>
-                </span>
-                <span class="techstack-item">
-                  <span class="techstack-text">JavaScript</span>
-                </span>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <img
-                src="./assets/projects/100-days.png"
-                alt="100 Days of Projects"
-                class="project-image"
-              />
-              <h3 class="project-title">100 Days of Projects</h3>
-              <p class="project-description">
-                A daily coding challenge to improve frontend development skills.
-                Building a new project every day to master HTML, CSS, and
-                JavaScript concepts.
-              </p>
-              <div class="buttons-projects">
-                <a
-                  href="#"
-                  class="btn btn--primary project-link --disabled"
-                  target="_blank"
-                  >Live Demo</a
-                >
-                <a
-                  href="https://github.com/toko-stark/100-days-of-projects"
-                  class="btn btn--primary github-link"
-                  target="_blank"
-                  >View Code</a
-                >
-              </div>
-              <div class="techstack-project">
-                <span class="techstack-item">
-                  <span class="techstack-text">JavaScript</span>
-                </span>
-                <span class="techstack-item">
-                  <span class="techstack-text">HTML</span>
-                </span>
-                <span class="techstack-item">
-                  <span class="techstack-text">CSS</span>
-                </span>
-              </div>
-            </div>
-            <div class="project-card">
-              <img
-                src="./assets/projects/readmegen.png"
-                alt="ReadMe Generator"
-                class="project-image"
-              />
-              <h3 class="project-title">100 Days of Projects</h3>
-              <p class="project-description">
-                This project, readme-generator, aims to simplify the process of
-                creating comprehensive README files for GitHub repositories.
-              </p>
-              <div class="buttons-projects">
-                <a
-                  href="#"
-                  class="btn btn--primary project-link --disabled"
-                  target="_blank"
-                  >Live Demo</a
-                >
-                <a
-                  href="https://github.com/toko-stark/readme-generator"
-                  class="btn btn--primary github-link"
-                  target="_blank"
-                  >View Code</a
-                >
-              </div>
-              <div class="techstack-project">
-                <span class="techstack-item">
-                  <span class="techstack-text">JavaScript</span>
-                </span>
-                <span class="techstack-item">
-                  <span class="techstack-text">HTML</span>
-                </span>
-                <span class="techstack-item">
-                  <span class="techstack-text">CSS</span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <div class="projects-grid"></div>
         </div>
       </section>
 
@@ -588,7 +396,7 @@
 
     <script src="./js/terminal.js"></script>
     <script src="./js/scrollEffect.js"></script>
-    <script src="./js/projectHover.js"></script>
+    <script src="./js/projects.js"></script>
 
     <footer class="footer">
       <div class="container footer-content">
