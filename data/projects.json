@@ -16,7 +16,7 @@
     "description": "My personal developer portfolio showcasing my projects, skills, and experience. Built with modern CSS and vanilla JavaScript.",
     "image": "./assets/projects/portfolio.svg",
     "private": false,
-    "liveDemo": "https://tokodev-portfolio.netlify.app/",
+    "liveDemo": "https://toko-stark.github.io/portfolio/",
     "github": "https://github.com/toko-stark/portfolio",
     "techStack": ["HTML", "CSS", "JavaScript"],
     "updatedAt": "2026-01-01"
@@ -27,7 +27,7 @@
     "description": "An AI-powered tool that generates structured README files for GitHub repositories automatically from repo data.",
     "image": "./assets/projects/readmegen.svg",
     "private": false,
-    "liveDemo": null,
+    "liveDemo": "https://toko-stark.github.io/readme-generator/",
     "github": "https://github.com/toko-stark/readme-generator",
     "techStack": ["CSS", "JavaScript"],
     "updatedAt": "2025-12-11"
