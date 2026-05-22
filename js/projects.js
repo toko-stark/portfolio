@@ -8,8 +8,13 @@
 
 const GITHUB_USER = 'toko-stark';
 const PUBLIC_REPO_LIMIT = 6;
-const CACHE_KEY = 'portfolio:gh-repos:v1';
+const CACHE_KEY = 'portfolio:gh-repos:v2';
 const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
+
+// Repo names to hide from the portfolio (lowercase)
+const REPO_BLACKLIST = new Set([
+  'toko-stark', // GitHub profile README
+]);
 
 // Gradient palettes. Repo name is hashed to pick one deterministically,
 // so the same repo always renders the same colors.
@@ -101,7 +106,13 @@ async function fetchGitHubRepos() {
   const data = await res.json();
 
   const mapped = data
-    .filter((r) => !r.fork && !r.archived && !r.private)
+    .filter(
+      (r) =>
+        !r.fork &&
+        !r.archived &&
+        !r.private &&
+        !REPO_BLACKLIST.has(r.name.toLowerCase())
+    )
     .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
     .slice(0, PUBLIC_REPO_LIMIT)
     .map((r) => ({
