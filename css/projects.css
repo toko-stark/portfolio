@@ -151,4 +151,39 @@
   pointer-events: none;
   opacity: 0.45;
   filter: grayscale(0.3);
+  display: inline-block;
+  text-align: center;
+}
+
+/* Loading skeleton */
+.project-skeleton {
+  height: 380px;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.02) 30%,
+    rgba(168, 85, 247, 0.08) 50%,
+    rgba(255, 255, 255, 0.02) 70%
+  );
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.4s ease-in-out infinite;
+  border: 1px solid var(--c-border);
+}
+
+@keyframes skeletonShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Error / empty state */
+.projects-error {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border: 1px dashed var(--c-border);
+  border-radius: var(--radius-md);
+  color: var(--c-text-muted);
+}
+
+.projects-error p {
+  margin-bottom: 1.25rem;
 }
