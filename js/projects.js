@@ -11,18 +11,58 @@ const PUBLIC_REPO_LIMIT = 6;
 const CACHE_KEY = 'portfolio:gh-repos:v1';
 const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
 
-// Map repo name (lowercase) -> existing SVG in assets/projects/
-const IMAGE_MAP = {
-  '100-days-of-projects': './assets/projects/100-days.svg',
-  'portfolio': './assets/projects/portfolio.svg',
-  'readme-generator': './assets/projects/readmegen.svg',
-  'omnifood': './assets/projects/omnifood.svg',
-  'nutrivisionai': './assets/projects/nutrivision.svg',
-};
-const DEFAULT_IMAGE = './assets/projects/portfolio.svg';
+// Gradient palettes. Repo name is hashed to pick one deterministically,
+// so the same repo always renders the same colors.
+const PALETTES = [
+  ['#a855f7', '#d946ef'], // purple → magenta
+  ['#3b82f6', '#06b6d4'], // blue → cyan
+  ['#f97316', '#facc15'], // orange → amber
+  ['#10b981', '#84cc16'], // emerald → lime
+  ['#ef4444', '#f97316'], // red → orange
+  ['#8b5cf6', '#3b82f6'], // violet → blue
+  ['#ec4899', '#f43f5e'], // pink → rose
+  ['#14b8a6', '#22d3ee'], // teal → cyan
+  ['#eab308', '#f59e0b'], // gold
+  ['#6366f1', '#a855f7'], // indigo → purple
+];
 
-function imageFor(repoName) {
-  return IMAGE_MAP[repoName.toLowerCase()] || DEFAULT_IMAGE;
+function hashString(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = (h * 31 + s.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+function initialsFor(name) {
+  const parts = name.replace(/[-_]/g, ' ').split(/\s+/).filter(Boolean);
+  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
+
+function generatedImage(seed) {
+  const h = hashString(seed);
+  const [c1, c2] = PALETTES[h % PALETTES.length];
+  const angle = h % 360;
+  const initials = initialsFor(seed);
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="g" gradientTransform="rotate(${angle} 0.5 0.5)">
+        <stop offset="0%" stop-color="${c1}"/>
+        <stop offset="100%" stop-color="${c2}"/>
+      </linearGradient>
+      <pattern id="p" width="44" height="44" patternUnits="userSpaceOnUse">
+        <circle cx="22" cy="22" r="1.3" fill="rgba(255,255,255,0.18)"/>
+      </pattern>
+    </defs>
+    <rect width="600" height="400" fill="url(#g)"/>
+    <rect width="600" height="400" fill="url(#p)"/>
+    <rect width="600" height="400" fill="rgba(0,0,0,0.18)"/>
+    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+      font-family="Segoe UI, Tahoma, sans-serif" font-weight="800" font-size="160"
+      fill="rgba(255,255,255,0.95)" letter-spacing="-6">${initials}</text>
+  </svg>`;
+  return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 }
 
 function setGridState(html) {
@@ -68,7 +108,7 @@ async function fetchGitHubRepos() {
       id: r.name,
       title: prettifyName(r.name),
       description: r.description || 'No description provided.',
-      image: imageFor(r.name),
+      image: generatedImage(r.name),
       private: false,
       liveDemo: deriveLiveDemo(r),
       github: r.html_url,
@@ -212,11 +252,11 @@ function cardHtml(p) {
 
   return `
     <article class="project-card">
-      <img src="${escapeHtml(p.image || DEFAULT_IMAGE)}"
+      <img src="${escapeHtml(p.image || generatedImage(p.id || p.title))}"
            alt="${escapeHtml(p.title)} preview"
            class="project-image"
            loading="lazy"
-           onerror="this.onerror=null;this.src='${DEFAULT_IMAGE}'"/>
+           onerror="this.onerror=null;this.src='${generatedImage(p.id || p.title)}'"/>
       <h3 class="project-title">${escapeHtml(p.title)}</h3>
       <p class="project-description">${escapeHtml(p.description)}</p>
       <div class="techstack-project">${techTags}</div>

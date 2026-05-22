@@ -1,4 +1,7 @@
 (function () {
+  const yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
   const toggle = document.querySelector('.nav-menu');
   const menu = document.querySelector('.menu-container');
   if (!toggle || !menu) return;
