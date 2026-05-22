@@ -8,7 +8,7 @@
 
 const GITHUB_USER = 'toko-stark';
 const PUBLIC_REPO_LIMIT = 6;
-const CACHE_KEY = 'portfolio:gh-repos:v2';
+const CACHE_KEY = 'portfolio:gh-repos:v3';
 const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
 
 // Repo names to hide from the portfolio (lowercase)
@@ -16,27 +16,28 @@ const REPO_BLACKLIST = new Set([
   'toko-stark', // GitHub profile README
 ]);
 
-// Gradient palettes. Repo name is hashed to pick one deterministically,
-// so the same repo always renders the same colors.
+// Each entry: [base, accent, glow] used for layered gradient art.
+// Tuned to feel like the rest of the portfolio (saturated, deep, with bloom).
 const PALETTES = [
-  ['#a855f7', '#d946ef'], // purple → magenta
-  ['#3b82f6', '#06b6d4'], // blue → cyan
-  ['#f97316', '#facc15'], // orange → amber
-  ['#10b981', '#84cc16'], // emerald → lime
-  ['#ef4444', '#f97316'], // red → orange
-  ['#8b5cf6', '#3b82f6'], // violet → blue
-  ['#ec4899', '#f43f5e'], // pink → rose
-  ['#14b8a6', '#22d3ee'], // teal → cyan
-  ['#eab308', '#f59e0b'], // gold
-  ['#6366f1', '#a855f7'], // indigo → purple
+  ['#7c3aed', '#ec4899', '#c084fc'], // violet → pink
+  ['#2563eb', '#0ea5e9', '#67e8f9'], // royal blue → sky
+  ['#0f766e', '#10b981', '#5eead4'], // teal → emerald
+  ['#dc2626', '#f97316', '#fcd34d'], // red → amber
+  ['#6d28d9', '#3b82f6', '#a5b4fc'], // indigo → blue
+  ['#be185d', '#f43f5e', '#fda4af'], // berry → rose
+  ['#b45309', '#eab308', '#fde68a'], // bronze → gold
+  ['#0c4a6e', '#0891b2', '#67e8f9'], // deep cyan
+  ['#4c1d95', '#a855f7', '#e9d5ff'], // deep purple
+  ['#065f46', '#84cc16', '#d9f99d'], // forest → lime
 ];
 
 function hashString(s) {
-  let h = 0;
+  let h = 2166136261;
   for (let i = 0; i < s.length; i++) {
-    h = (h * 31 + s.charCodeAt(i)) | 0;
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619);
   }
-  return Math.abs(h);
+  return Math.abs(h | 0);
 }
 
 function initialsFor(name) {
@@ -47,27 +48,68 @@ function initialsFor(name) {
 
 function generatedImage(seed) {
   const h = hashString(seed);
-  const [c1, c2] = PALETTES[h % PALETTES.length];
-  const angle = h % 360;
+  const [c1, c2, glow] = PALETTES[h % PALETTES.length];
   const initials = initialsFor(seed);
+
+  // Deterministic but varied placement of the two glow blobs
+  const blob1X = 80 + (h % 180);
+  const blob1Y = 60 + ((h >> 3) % 140);
+  const blob2X = 360 + ((h >> 5) % 180);
+  const blob2Y = 200 + ((h >> 7) % 160);
+  const angle = h % 360;
+
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
     <defs>
-      <linearGradient id="g" gradientTransform="rotate(${angle} 0.5 0.5)">
+      <linearGradient id="bg" gradientTransform="rotate(${angle} 0.5 0.5)">
         <stop offset="0%" stop-color="${c1}"/>
-        <stop offset="100%" stop-color="${c2}"/>
+        <stop offset="100%" stop-color="#0b0b14"/>
       </linearGradient>
-      <pattern id="p" width="44" height="44" patternUnits="userSpaceOnUse">
-        <circle cx="22" cy="22" r="1.3" fill="rgba(255,255,255,0.18)"/>
+      <radialGradient id="glow1">
+        <stop offset="0%" stop-color="${glow}" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="${glow}" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="glow2">
+        <stop offset="0%" stop-color="${c2}" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="${c2}" stop-opacity="0"/>
+      </radialGradient>
+      <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+        <path d="M32 0 H0 V32" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
       </pattern>
+      <linearGradient id="vignette" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+        <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+      </linearGradient>
+      <filter id="blur"><feGaussianBlur stdDeviation="48"/></filter>
     </defs>
-    <rect width="600" height="400" fill="url(#g)"/>
-    <rect width="600" height="400" fill="url(#p)"/>
-    <rect width="600" height="400" fill="rgba(0,0,0,0.18)"/>
+
+    <rect width="600" height="400" fill="url(#bg)"/>
+
+    <g filter="url(#blur)">
+      <circle cx="${blob1X}" cy="${blob1Y}" r="160" fill="url(#glow1)"/>
+      <circle cx="${blob2X}" cy="${blob2Y}" r="180" fill="url(#glow2)"/>
+    </g>
+
+    <rect width="600" height="400" fill="url(#grid)"/>
+    <rect width="600" height="400" fill="url(#vignette)"/>
+
     <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
-      font-family="Segoe UI, Tahoma, sans-serif" font-weight="800" font-size="160"
-      fill="rgba(255,255,255,0.95)" letter-spacing="-6">${initials}</text>
+      font-family="'Segoe UI', system-ui, sans-serif"
+      font-weight="800" font-size="180" letter-spacing="-8"
+      fill="rgba(255,255,255,0.95)"
+      style="paint-order:stroke;stroke:rgba(0,0,0,0.18);stroke-width:2">${initials}</text>
+
+    <text x="28" y="34" font-family="'Courier New', monospace"
+      font-size="18" fill="rgba(255,255,255,0.55)" font-weight="600">&lt;/&gt;</text>
+
+    <text x="572" y="376" text-anchor="end"
+      font-family="'Courier New', monospace" font-size="14"
+      fill="rgba(255,255,255,0.45)" letter-spacing="2">${escapeSvgText(seed).toUpperCase().slice(0, 18)}</text>
   </svg>`;
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+}
+
+function escapeSvgText(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 function setGridState(html) {

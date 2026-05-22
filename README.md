@@ -1,59 +1,85 @@
 # Portfolio Website
 
-A modern, responsive portfolio website showcasing my work as a full-stack developer.
+A modern, responsive portfolio for **toko_stark** — auto-syncs with GitHub so new repos appear on the site without redeploying.
 
-## 🌐 Live Preview
+## Live Site
 
-Check out the live demo site: [https://tokodev-portfolio.netlify.app/](https://tokodev-portfolio.netlify.app/)
+[https://tokodev.xyz](https://tokodev.xyz)
 
-## 🚀 Features
+## Highlights
 
-- Responsive design that works on all devices
-- Mobile-friendly navigation menu with blur overlay
-- Animated hero section with rotating text showcase
-- Interactive terminal/webshell section with custom commands
-- About me section with experience metrics
-- Tech stack showcase with hover tooltips
-- Contact section with integrated form
-- Smooth scrolling and modern glassmorphic UI
-- Custom CSS animations and transitions
+- **Auto-loading projects** — fetches the 6 most recently updated public repos from the GitHub API on every page load (cached 1 h in localStorage). New public repo on GitHub → it appears on the site within an hour.
+- **Generated project artwork** — each repo gets a unique gradient cover with soft glow blobs and the repo's initials, derived deterministically from the repo name. No image assets to maintain.
+- **Mixed sources** — public GitHub repos are merged with curated private projects defined in `data/projects.json`.
+- **Interactive terminal** — Linux-style webshell with `help`, `whoami`, `aboutme`, `skills`, `projects`, `neofetch`, etc.
+- **Responsive** — mobile-first breakpoints (1100 / 900 / 830 / 720 / 540 / 400 px), real mobile hamburger menu with focus trap and outside-click close.
+- **Discoverable** — Open Graph + Twitter Card meta for rich embeds in Discord / WhatsApp / Slack / iMessage, JSON-LD `Person` schema for Google, plus `robots.txt` and `sitemap.xml`.
+- **Animated hero** with rotating role text, glassmorphic navbar, IntersectionObserver-driven reveals, prefers-reduced-motion support.
 
-## 🛠️ Technologies
+## Tech
 
-- HTML5
-- CSS3 (with CSS Grid, Flexbox, and responsive media queries)
-- JavaScript (ES6+)
-- Ionicons
+- HTML5, CSS3 (custom properties, Grid, Flexbox), vanilla JavaScript (ES2020+)
+- GitHub REST API (public, unauthenticated, with localStorage cache)
+- Ionicons for UI glyphs
+- Hosted on GitHub Pages with a custom domain (`tokodev.xyz`)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 portfolio/
 ├── css/
-│   ├── general.css      # Global styles and utilities
-│   ├── header.css       # Navigation and header styles
-│   ├── hero.css         # Hero section with animations
+│   ├── general.css      # Design tokens, body, utility classes
+│   ├── header.css       # Glass navbar + mobile menu
+│   ├── hero.css         # Hero section + code block animation
 │   ├── terminal.css     # Terminal/webshell styling
-│   ├── aboutme.css      # About section layouts
-│   ├── skills.css       # Tech stack grid and cards
-│   ├── contact.css      # Contact form styling
-│   └── queries.css      # Media queries for responsiveness
+│   ├── aboutme.css      # About section layout
+│   ├── skills.css       # Tech stack cards
+│   ├── projects.css     # Project cards + skeleton/error states
+│   ├── contact.css      # Contact card + form
+│   ├── footer.css       # Footer
+│   └── queries.css      # Mobile-first breakpoints
 ├── js/
-│   ├── terminal.js      # Terminal command logic
-│   └── scrollEffect.js  # Scroll animations
+│   ├── projects.js      # GitHub API loader + SVG generator
+│   ├── terminal.js      # Terminal command handlers
+│   ├── scrollEffect.js  # Scroll reveal + active nav link
+│   └── navMenu.js       # Mobile menu toggle + dynamic year
+├── data/
+│   └── projects.json    # Curated/private projects (merged into the GitHub list)
 ├── assets/
-│   ├── icons/           # Tech stack SVG icons
-│   ├── profile.webp     # Profile image
-│   └── favicon.ico      # Site favicon
-└── index.html           # Main HTML file
+│   ├── icons/           # Tech stack icons (HTML, CSS, JS, …)
+│   ├── profile.webp     # Profile picture
+│   └── favicon.ico
+├── CNAME                # Custom domain (tokodev.xyz)
+├── robots.txt
+├── sitemap.xml
+└── index.html
 ```
 
-## 🎨 Sections
+## Adding a project
 
-1. **Header** - Sticky navigation with mobile menu and logo
-2. **Hero** - Introduction with animated rotating developer roles and social links
-3. **Terminal** - Interactive Linux-style terminal with custom commands
-4. **About** - Personal information, background, and experience metrics
-5. **Skills** - Tech stack showcase with hover effects and tooltips
-6. **Projects** - Featured projects and portfolio work samples
-7. **Contact** - Email information and contact form
+**Public:** just create a new repo on GitHub. Set the repo's **Website** field to your live demo URL (or enable GitHub Pages — the site auto-detects `has_pages` and builds the URL). To label the tech stack, add repo **topics** like `javascript`, `html`, `node`, etc.
+
+**Private / curated:** add an entry to `data/projects.json`:
+
+```json
+{
+  "id": "my-secret-project",
+  "title": "My Secret Project",
+  "description": "Short pitch.",
+  "private": true,
+  "liveDemo": null,
+  "github": null,
+  "techStack": ["JavaScript"],
+  "updatedAt": "2026-05-22"
+}
+```
+
+**Hide a public repo** (e.g. profile README): add its lowercase name to `REPO_BLACKLIST` in `js/projects.js`.
+
+## Local development
+
+No build step. Just open `index.html` through a local server (e.g. `npx serve .` or VS Code's Live Server) so the `fetch` calls to `data/projects.json` and the GitHub API work. Opening it via `file://` will break the local JSON fetch.
+
+## License
+
+Personal project — code is open for reference, please don't ship it as your own portfolio.
