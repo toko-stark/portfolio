@@ -70,7 +70,7 @@ async function fetchGitHubRepos() {
       description: r.description || 'No description provided.',
       image: imageFor(r.name),
       private: false,
-      liveDemo: r.homepage && r.homepage.trim() ? r.homepage : null,
+      liveDemo: deriveLiveDemo(r),
       github: r.html_url,
       techStack: deriveTechStack(r),
       updatedAt: r.pushed_at,
@@ -78,6 +78,14 @@ async function fetchGitHubRepos() {
 
   writeCache(mapped);
   return mapped;
+}
+
+function deriveLiveDemo(repo) {
+  if (repo.homepage && repo.homepage.trim()) return repo.homepage.trim();
+  if (repo.has_pages) {
+    return `https://${repo.owner.login}.github.io/${repo.name}/`;
+  }
+  return null;
 }
 
 function deriveTechStack(repo) {
