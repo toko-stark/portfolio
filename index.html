@@ -39,7 +39,7 @@
           />
           <a href="#" class="logo-text">TokoDev</a>
         </div>
-        <ul class="nav-links hidden">
+        <ul class="nav-links">
           <li><a class="nav-link" href="#hero">Home</a></li>
           <li><a class="nav-link" href="#terminal">Terminal</a></li>
           <li><a class="nav-link" href="#aboutme">About</a></li>
@@ -47,15 +47,18 @@
           <li><a class="nav-link" href="#projects">Projects</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-        <ion-icon class="nav-menu hidden" name="menu-outline"></ion-icon>
+        <button class="nav-menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
 
-        <div class="menu-container hidden">
+        <div class="menu-container" id="mobile-menu">
           <ul>
-            <li><a class="nav-menu-link" href="#">Home</a></li>
-            <li><a class="nav-menu-link" href="#">About</a></li>
-            <li><a class="nav-menu-link" href="#">Skills</a></li>
-            <li><a class="nav-menu-link" href="#">Projects</a></li>
-            <li><a class="nav-menu-link" href="#">Contact</a></li>
+            <li><a class="nav-menu-link" href="#hero">Home</a></li>
+            <li><a class="nav-menu-link" href="#terminal">Terminal</a></li>
+            <li><a class="nav-menu-link" href="#aboutme">About</a></li>
+            <li><a class="nav-menu-link" href="#skill">Skills</a></li>
+            <li><a class="nav-menu-link" href="#projects">Projects</a></li>
+            <li><a class="nav-menu-link" href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -105,7 +108,7 @@
             </div>
           </div>
 
-          <div class="grid-container-2 hidden">
+          <div class="grid-container-2">
             <div class="codeblock">
               <div class="code-animation" aria-label="Code sample animation">
                 <div class="code-line">
@@ -210,8 +213,8 @@
             <div class="aboutme-container-2">
               <div class="box-container-aboutme">
                 <img
-                  src="./assets/favicon.ico"
-                  alt="TokoDev Logo"
+                  src="./assets/profile.webp"
+                  alt="Toko Stark profile picture"
                   class="aboutme-img"
                 />
                 <h3 class="name">Toko Stark</h3>
@@ -337,24 +340,41 @@
         <div class="container">
           <div class="contact-box">
             <h2>Get in Touch</h2>
+            <p class="contact-intro">
+              Have a project, opportunity, or just want to say hi? Drop a message.
+            </p>
             <div class="grid-containert-contact">
-              <div class="contact-emailbox">
-                <div class="contact-box--mail">
-                  <div class="icon">
-                    <ion-icon
-                      class="contact-icon"
-                      name="mail-outline"
-                    ></ion-icon>
-                  </div>
-                  <a href="mailto:toko.stark@icloud.com"
-                    >toko.stark@icloud.com</a
+              <div class="contact-box--mail">
+                <div class="icon">
+                  <ion-icon class="contact-icon" name="mail-outline"></ion-icon>
+                </div>
+                <p class="contact-email-label">Email Me</p>
+                <a href="mailto:toko.stark@icloud.com" class="contact-email-link">
+                  toko.stark@icloud.com
+                </a>
+                <div class="contact-social">
+                  <a
+                    href="https://github.com/toko-stark"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="contact-social-link"
+                    aria-label="GitHub"
                   >
-                  <p class="contact-email">Email Me</p>
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                  <a
+                    href="https://discord.com/users/789894696176058368"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="contact-social-link"
+                    aria-label="Discord"
+                  >
+                    <ion-icon name="logo-discord"></ion-icon>
+                  </a>
                 </div>
               </div>
               <form id="contact-form" class="form" netlify>
-                <h3>Contact Form</h3>
-                <div class="firstRow">
+                <div class="form-row">
                   <input
                     type="text"
                     class="input-field"
@@ -370,24 +390,23 @@
                     required
                   />
                 </div>
-                <div class="secondRow">
-                  <input
-                    type="text"
-                    name="subject"
-                    placeholder="Subject*"
-                    required
-                  />
-                  <textarea
-                    class="input-field textarea-field"
-                    name="message"
-                    placeholder="Your Message*"
-                    required
-                  ></textarea>
-                </div>
+                <input
+                  type="text"
+                  class="input-field"
+                  name="subject"
+                  placeholder="Subject*"
+                  required
+                />
+                <textarea
+                  class="input-field textarea-field"
+                  name="message"
+                  placeholder="Your Message*"
+                  required
+                ></textarea>
+                <button id="submitButton" type="submit" class="btn btn--primary form-submit">
+                  Send Message
+                </button>
               </form>
-              <button id="submitButton" type="submit" form="contact-form">
-                Send
-              </button>
             </div>
           </div>
         </div>
@@ -397,6 +416,7 @@
     <script src="./js/terminal.js"></script>
     <script src="./js/scrollEffect.js"></script>
     <script src="./js/projects.js"></script>
+    <script src="./js/navMenu.js"></script>
 
     <footer class="footer">
       <div class="container footer-content">

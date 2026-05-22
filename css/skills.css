@@ -13,7 +13,7 @@
       rgba(192, 38, 211, 0.2) 30%,
       transparent 50%
     ),
-    #0b0f17;
+    var(--c-bg);
 }
 
 /* Heading */
